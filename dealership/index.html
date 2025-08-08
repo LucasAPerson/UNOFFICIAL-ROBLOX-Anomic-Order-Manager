@@ -1,0 +1,273 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Dealership</title>
+  <link rel="stylesheet" href="style0.css"/>
+</head>
+<body>
+  <div class="left">
+	<div class="left-column">
+      <h2>Vehicles</h2>
+      <div class="selected-ingredients">
+        <div id="selectedList">No vehicles selected.</div>
+        <div class="total">Total: $<span id="totalPrice">0.00</span></div>
+      </div>
+    </div>
+  <div class="container">
+    <div class="left-column">
+      <div class="ingredient-list">
+		<div class="ingredient" data-price="400" data-name="Caddy">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Caddy - $400
+		</div>
+		<div class="ingredient" data-price="600" data-name="Hatchback">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Hatchback - $600
+		</div>
+		<div class="ingredient" data-price="1000" data-name="Sport Hatch">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Sport Hatch - $1000
+		</div>
+		<div class="ingredient" data-price="750" data-name="Sedan">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Sedan - $750
+		</div>
+		<div class="ingredient" data-price="1250" data-name="Sedan (Facelift)">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Sedan (Facelift) - $1250
+		</div>
+		<div class="ingredient" data-price="1400" data-name="Pickup">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Pickup - $1400
+		</div>
+		<div class="ingredient" data-price="2000" data-name="Team Pickup">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Team Pickup - $2000
+		</div>
+		<div class="ingredient" data-price="950" data-name="Family Van">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Family Van - $950
+		</div>
+		<div class="ingredient" data-price="2750" data-name="Family SUV">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Family SUV - $2750
+		</div>
+		<div class="ingredient" data-price="1200" data-name="Station Wagon">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Station Wagon - $1200
+		</div>
+		<div class="ingredient" data-price="1400" data-name="Classic Wagon">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Classic Wagon - $1400
+		</div>
+		<div class="ingredient" data-price="3750" data-name="Campervan">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Campervan - $3750
+		</div>
+		<div class="ingredient" data-price="4000" data-name="Classic RV">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Classic RV - $4000
+		</div>
+		<div class="ingredient" data-price="4200" data-name="RV - $4200">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) RV - $4200
+		</div>
+		<div class="ingredient" data-price="2200" data-name="Small Trailer">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Small Trailer - $2200
+		</div>
+		<div class="ingredient" data-price="4500" data-name="Large Trailer">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Large Trailer - $4500
+		</div>
+		<div class="ingredient" data-price="1500" data-name="SUV">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) SUV - $1500
+		</div>
+		<div class="ingredient" data-price="2000" data-name="SUV (Dune)">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) SUV (Dune) - $2000
+		</div>
+		<div class="ingredient" data-price="3000" data-name="SUV (Euro)">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) SUV (Euro) - $3000
+		</div>
+		<div class="ingredient" data-price="3500" data-name="Full-Size SUV">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Full-Size SUV - $3500
+		</div>
+      </div>
+    </div>
+    <div class="left-column">
+      <div class="ingredient-list">
+		<div class="ingredient" data-price="1000" data-name="Passenger Van">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Passenger Van - $1000
+		</div>
+		<div class="ingredient" data-price="1200" data-name="Van">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Van - $1200
+		</div>
+		<div class="ingredient" data-price="1400" data-name="Van (Euro)">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Van (Euro) - $1400
+		</div>
+		<div class="ingredient" data-price="1400" data-name="Lowrider">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Lowrider - $1400
+		</div>
+		<div class="ingredient" data-price="1600" data-name="Lowrider (Coupe)">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Lowrider (Coupe) - $1600
+		</div>
+		<div class="ingredient" data-price="3000" data-name="Muscle Coupe">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Muscle Coupe - $3000
+		</div>
+		<div class="ingredient" data-price="3750" data-name="Muscle Car">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Muscle Car - $3750
+		</div>
+		<div class="ingredient" data-price="3200" data-name="Fastback">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Fastback - $3200
+		</div>
+		<div class="ingredient" data-price="2000" data-name="Roadster">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Roadster - $2000
+		</div>
+		<div class="ingredient" data-price="3200" data-name="Coupe">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Coupe - $3200
+		</div>
+		<div class="ingredient" data-price="4000" data-name="Sports Car">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Sports Car - $4000
+		</div>
+		<div class="ingredient" data-price="2500" data-name="Stainless Sports Car">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Stainless Sports Car - $2500
+		</div>
+		<div class="ingredient" data-price="5000" data-name="Luxury Sports Car">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Luxury Sports Car - $5000
+		</div>
+		<div class="ingredient" data-price="5000" data-name="Luxury Car">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Luxury Car - $5000
+		</div>
+		<div class="ingredient" data-price="2500" data-name="Convertible">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Convertible - $2500
+		</div>
+		<div class="ingredient" data-price="6200" data-name="Supercar">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Supercar - $6200
+		</div>
+		<div class="ingredient" data-price="9100" data-name="Hypercar">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Hypercar - $9100
+		</div>
+		<div class="ingredient" data-price="9400" data-name="Hypercar (Facelift)">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Hypercar (Facelift) - $9400
+		</div>
+		<div class="ingredient" data-price="6000" data-name="Humvee (Civilian)">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Humvee (Civilian) - $6000
+		</div>
+		<div class="ingredient" data-price="9400" data-name="Humvee">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Humvee - $9400
+		</div>
+		<div class="ingredient" data-price="6500" data-name="Luxury Off-Roader">
+			<button onclick="adjustIngredient(this, -1)">-</button>
+			<button onclick="adjustIngredient(this, 1)">+</button>
+			( <span class="quantity">0</span> ) Luxury Off-Roader - $6500
+		</div>
+      </div>
+    </div>
+  </div>
+<script>
+	function toggleDetails(elem) {
+		const details = elem.nextElementSibling;
+		const btn = elem.querySelector('button');
+		if (details.style.display === 'block') {
+			details.style.display = 'none';
+			btn.textContent = 'Show Recipe';
+		} else {
+			details.style.display = 'block';
+			btn.textContent = 'Hide Recipe';
+		}
+	}
+
+	function adjustIngredient(button, delta) {
+		const ingredientDiv = button.closest('.ingredient');
+		const qtySpan = ingredientDiv.querySelector('.quantity');
+		const name = ingredientDiv.getAttribute('data-name');
+		const price = parseFloat(ingredientDiv.getAttribute('data-price'));
+		let quantity = parseInt(qtySpan.textContent);
+	quantity = Math.max(0, quantity + delta);
+	qtySpan.textContent = quantity;
+	updateSelection();
+	}
+	function updateSelection() {
+		const ingredients = document.querySelectorAll('.ingredient');
+		const selectedList = document.getElementById('selectedList');
+		const totalPriceElem = document.getElementById('totalPrice');
+		let total = 0;
+		let selected = [];
+	ingredients.forEach(item => {
+		const qty = parseInt(item.querySelector('.quantity').textContent);
+		if (qty > 0) {
+		const name = item.getAttribute('data-name');
+		const price = parseFloat(item.getAttribute('data-price'));
+		selected.push(`${name} (${ qty })`);
+		total += price * qty;
+		}
+	});
+	
+	selectedList.innerHTML = selected.length > 0 ? selected.join('<br>') : 'No vehicles selected.';
+	totalPriceElem.textContent = total.toFixed(2);
+	}
+</script>
+</body>
