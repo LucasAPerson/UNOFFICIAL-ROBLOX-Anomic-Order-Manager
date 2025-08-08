@@ -1,0 +1,86 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Pancakes</title>
+  <link rel="stylesheet" href="style0.css"/>
+</head>
+<body>
+  <div class="left">
+    <h2>Menu Items</h2>
+    <div class="recipe">
+      <div class="recipe-title" onclick="toggleDetails(this)">
+        <span>Pancake - $150</span>
+        <img class="arrow-icon" src="img/arrow-down.ico" alt="Expand" data-state="collapsed" />
+      </div>
+      <div class="recipe-details">
+        <p>Ingredients: Milk (1/2), Butter (1)</p>
+      </div>
+    </div>
+  </div>
+<div class="right">
+  <h2>Pancake Customizer</h2>
+  <div class="selected-ingredients">
+    <div id="selectedList">No ingredients selected.</div>
+    <div class="total">Total: $<span id="totalPrice">0.00</span></div>
+  </div>
+    <div class="ingredient-list">
+  <div class="ingredient" data-price="75" data-name="1/2 Milk">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) 1/2 Milk - $75
+  </div>
+  <div class="ingredient" data-price="75" data-name="Butter">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Butter - $75
+  </div>
+</div>
+  </div>
+<script>
+	function toggleDetails(elem) {
+		const details = elem.nextElementSibling;
+		const icon = elem.querySelector('.arrow-icon');
+		const isOpen = details.style.display === 'block';
+	if (isOpen) {
+		details.style.display = 'none';
+    if (icon) {
+      icon.src = 'img/arrow-down.ico';   // Inactive icon
+      icon.alt = 'Expand';
+		}
+	} else {
+		details.style.display = 'block';
+    if (icon) {
+      icon.src = 'img/arrow-up.ico';     // Active icon
+      icon.alt = 'Collapse';
+			}
+		}
+	}
+    function adjustIngredient(button, delta) {
+		const ingredientDiv = button.closest('.ingredient');
+		const qtySpan = ingredientDiv.querySelector('.quantity');
+		const name = ingredientDiv.getAttribute('data-name');
+		const price = parseFloat(ingredientDiv.getAttribute('data-price'));
+		let quantity = parseInt(qtySpan.textContent);
+		quantity = Math.max(0, quantity + delta);
+		qtySpan.textContent = quantity;
+		updateSelection();
+		}
+	function updateSelection() {
+		const ingredients = document.querySelectorAll('.ingredient');
+		const selectedList = document.getElementById('selectedList');
+		const totalPriceElem = document.getElementById('totalPrice');
+		let total = 0;
+		let selected = [];
+		ingredients.forEach(item => {
+			const qty = parseInt(item.querySelector('.quantity').textContent);
+			if (qty > 0) {
+			const name = item.getAttribute('data-name');
+			const price = parseFloat(item.getAttribute('data-price'));
+			selected.push(`${name} (${ qty })`);
+			total += price * qty;
+			}
+		});
+		selectedList.innerHTML = selected.length > 0 ? selected.join('<br>') : 'No ingredients selected.';
+		totalPriceElem.textContent = total.toFixed(2);
+	}
+</script>
+</body>
