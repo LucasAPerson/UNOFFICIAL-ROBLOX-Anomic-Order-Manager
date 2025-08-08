@@ -1,0 +1,176 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Burgers</title>
+  <link rel="stylesheet" href="style0.css"/>
+</head>
+<body>
+  <div class="left">
+    <h2>Menu Items</h2>
+    <div class="recipe">
+      <div class="recipe-title" onclick="toggleDetails(this)">
+        <span>Porkchop - $150</span>
+        <img class="arrow-icon" src="img/arrow-down.ico" alt="Expand" data-state="collapsed" />
+      </div>
+      <div class="recipe-details">
+        <p>Ingredients: Dough, Porkchop (1)</p>
+      </div>
+    </div>
+    <div class="recipe">
+      <div class="recipe-title" onclick="toggleDetails(this)">
+        <span>Beef - $175</span>
+        <img class="arrow-icon" src="img/arrow-down.ico" alt="Expand" data-state="collapsed" />
+      </div>
+      <div class="recipe-details">
+        <p>Ingredients: Dough, Beef (1)</p>
+      </div>
+    </div>
+	<div class="recipe">
+      <div class="recipe-title" onclick="toggleDetails(this)">
+        <span>Pork 'n Cheese - $225</span>
+        <img class="arrow-icon" src="img/arrow-down.ico" alt="Expand" data-state="collapsed" />
+      </div>
+      <div class="recipe-details">
+        <p>Ingredients: Dough, Porkchop (1), Cheddar (1)</p>
+      </div>
+    </div>
+	<div class="recipe">
+      <div class="recipe-title" onclick="toggleDetails(this)">
+        <span>Beef 'n Cheese - $250</span>
+        <img class="arrow-icon" src="img/arrow-down.ico" alt="Expand" data-state="collapsed" />
+      </div>
+      <div class="recipe-details">
+        <p>Ingredients: Dough, Beef (1), Cheddar (1)</p>
+      </div>
+    </div>
+	<div class="recipe">
+      <div class="recipe-title" onclick="toggleDetails(this)">
+        <span>Pickled Porkchop - $225</span>
+        <img class="arrow-icon" src="img/arrow-down.ico" alt="Expand" data-state="collapsed" />
+      </div>
+      <div class="recipe-details">
+        <p>Ingredients: Dough, Porkchop (1), Pickles (1)</p>
+      </div>
+    </div>
+	<div class="recipe">
+      <div class="recipe-title" onclick="toggleDetails(this)">
+        <span>Pickled Beef - $250</span>
+        <img class="arrow-icon" src="img/arrow-down.ico" alt="Expand" data-state="collapsed" />
+      </div>
+      <div class="recipe-details">
+        <p>Ingredients: Dough, Beef (1), Pickles (1)</p>
+      </div>
+    </div>
+  </div>
+<div class="right">
+  <h2>Burger Customizer</h2>
+  <div class="selected-ingredients">
+    <div id="selectedList">No ingredients selected.</div>
+    <div class="total">Total: $<span id="totalPrice">0.00</span></div>
+  </div>
+    <div class="ingredient-list">
+  <div class="ingredient" data-price="50" data-name="Dough">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Dough - $50
+  </div>
+  <div class="ingredient" data-price="100" data-name="Porkchop">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Porkchop - $100
+  </div>
+  <div class="ingredient" data-price="125" data-name="Beef">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Beef - $125
+  </div>
+  <div class="ingredient" data-price="75" data-name="Mozzarella">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Mozzarella - $75
+  </div>
+  <div class="ingredient" data-price="75" data-name="Cheddar">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Cheddar - $75
+  </div>
+  <div class="ingredient" data-price="150" data-name="Blue Cheese">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Blue Cheese - $150
+  </div>
+  <div class="ingredient" data-price="75" data-name="Red Tomato">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> )  Tomato - $75
+  </div>
+  <div class="ingredient" data-price="150" data-name="Blue Tomato">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Blue Tomato - $150
+  </div>
+  <div class="ingredient" data-price="75" data-name="Pepperoni">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Pepperoni - $75
+  </div>
+  <div class="ingredient" data-price="75" data-name="Pickles">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Pickles - $75
+  </div>
+  <div class="ingredient" data-price="75" data-name="Banana">
+    <button onclick="adjustIngredient(this, -1)">-</button>
+    <button onclick="adjustIngredient(this, 1)">+</button>
+	( <span class="quantity">0</span> ) Banana - $75
+  </div>
+</div>
+  </div>
+<script>
+	function toggleDetails(elem) {
+		const details = elem.nextElementSibling;
+		const icon = elem.querySelector('.arrow-icon');
+		const isOpen = details.style.display === 'block';
+	if (isOpen) {
+		details.style.display = 'none';
+    if (icon) {
+      icon.src = 'img/arrow-down.ico';   // Inactive icon
+      icon.alt = 'Expand';
+		}
+	} else {
+		details.style.display = 'block';
+    if (icon) {
+      icon.src = 'img/arrow-up.ico';     // Active icon
+      icon.alt = 'Collapse';
+			}
+		}
+	}
+    function adjustIngredient(button, delta) {
+		const ingredientDiv = button.closest('.ingredient');
+		const qtySpan = ingredientDiv.querySelector('.quantity');
+		const name = ingredientDiv.getAttribute('data-name');
+		const price = parseFloat(ingredientDiv.getAttribute('data-price'));
+		let quantity = parseInt(qtySpan.textContent);
+		quantity = Math.max(0, quantity + delta);
+		qtySpan.textContent = quantity;
+		updateSelection();
+		}
+	function updateSelection() {
+		const ingredients = document.querySelectorAll('.ingredient');
+		const selectedList = document.getElementById('selectedList');
+		const totalPriceElem = document.getElementById('totalPrice');
+		let total = 0;
+		let selected = [];
+		ingredients.forEach(item => {
+			const qty = parseInt(item.querySelector('.quantity').textContent);
+			if (qty > 0) {
+			const name = item.getAttribute('data-name');
+			const price = parseFloat(item.getAttribute('data-price'));
+			selected.push(`${name} (${ qty })`);
+			total += price * qty;
+			}
+		});
+		selectedList.innerHTML = selected.length > 0 ? selected.join('<br>') : 'No ingredients selected.';
+		totalPriceElem.textContent = total.toFixed(2);
+		}
+  </script>
+</body>
