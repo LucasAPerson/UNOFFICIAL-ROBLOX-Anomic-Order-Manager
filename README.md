@@ -1,5 +1,10 @@
 This is an order manager for ROBLOX game Anomic. This is not an official tool by the Anomic team.
 
+
+
+
+Editing Tutorial:
+
 You will be shown how to modify the name, price, and position of an item. If you cannot see the code in plaintext, please view this file in a text editor.
 This tutorial applies for all menus. Here is the code for the Caddy:
 
